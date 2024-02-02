@@ -7,13 +7,13 @@
   >
     <path
       fill="currentColor"
-      d="M14.27 6.87L10 3.14L5.73 6.87L5 6.14l5-4.38l5 4.38zM14 8.42l-4.05 3.43L6 8.38v-.74l4-3.5l4 3.5zM11 9.7V8H9v1.7zm-1.73 4.03L5 10L.73 13.73L0 13l5-4.38L10 13zm10 0L15 10l-4.27 3.73L10 13l5-4.38L20 13zM5 11l4 3.5V18H1v-3.5zm10 0l4 3.5V18h-8v-3.5zm-9 6v-2H4v2zm10 0v-2h-2v2z"
+      d="M10 10L2.54 7.02L3 18H1l.48-11.41L0 6l10-4l10 4zm0-5c-.55 0-1 .22-1 .5s.45.5 1 .5s1-.22 1-.5s-.45-.5-1-.5m0 6l5.57-2.23c.71.94 1.2 2.07 1.36 3.3c-.3-.04-.61-.07-.93-.07c-2.55 0-4.78 1.37-6 3.41A6.986 6.986 0 0 0 4 12c-.32 0-.63.03-.93.07c.16-1.23.65-2.36 1.36-3.3z"
     ></path>
   </svg>
 </template>
 
 <script lang="ts">
 export default {
-  name: "DashiconsAdminMultisite",
+  name: "DashiconsWelcomeLearnMore",
 };
 </script>
