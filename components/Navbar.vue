@@ -1,21 +1,66 @@
+<script setup>
+useInitFlowbite();
+</script>
+
 <template>
   <nav
-    class="bg-gray-900 text-gray-100 py-3.5 px-6 shadow md:flex justify-between-items-center"
+    class="bg-cyan-700 text-white border-gray-200 dark:bg-gray-900 shadow mb-2"
   >
-    <div class="flex items-center cursor-pointer">
-      <span class="text-green-500 text-xl mr-1">
-        <i class="bi bi-messenger"></i>
-      </span>
-      <h1 class="text-x1">Designer</h1>
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    >
+      <div class="flex items-center space-x-3 rtl:space-x-reverse">
+        <IconsLogo />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >GlobalUniSearch</span
+        >
+      </div>
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none hover:text-cyan-700"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+        >
+          <li>
+            <NuxtLink
+              to="/"
+              class="block py-2 px-3 md:p-0 text-white hover:underline"
+              aria-current="page"
+              >Home</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
+              to="/favourites"
+              class="block py-2 px-3 md:p-0 text-white hover:underline"
+              >Favourites</NuxtLink
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <ul class="md:flex md:items-center">
-      <li class="md:mx-4">
-        <NuxtLink to="/">Search Universities</NuxtLink>
-      </li>
-      <li class="md:mx-4">
-        <NuxtLink to="/favourites">Favourites</NuxtLink>
-      </li>
-    </ul>
   </nav>
 </template>
