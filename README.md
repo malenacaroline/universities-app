@@ -1,4 +1,5 @@
-# GlobalUniSearch - Search Universites Nuxt App
+# GlobalUniSearch - Search Universites Nuxt App - Malena Aguiar
+
 
 A Nuxt.js project showcasing the power of Nuxt 3 and its features.
 
