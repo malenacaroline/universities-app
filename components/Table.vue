@@ -1,5 +1,20 @@
 <script setup>
-const { universities } = useForm();
+const { universities } = defineProps({ universities: { required: true } });
+const route = useRoute();
+const emit = defineEmits(["update"]);
+
+const toggleFavourite = (university) => {
+  const lsUniversities = JSON.parse(
+    localStorage.getItem("universities") || "{}"
+  );
+
+  if (Boolean(lsUniversities[university.name]))
+    delete lsUniversities[university.name];
+  else lsUniversities[university.name] = university;
+
+  localStorage.setItem("universities", JSON.stringify(lsUniversities));
+  if (route.name === "favourites") emit("update:universities", lsUniversities);
+};
 </script>
 
 <template>
@@ -23,7 +38,7 @@ const { universities } = useForm();
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white whitespace-break-spaces"
+            class="px-6 py-4 font-medium text-gray-900 dark:text-white"
           >
             {{ university.name || "N/A" }}
           </th>
@@ -37,7 +52,7 @@ const { universities } = useForm();
             >
           </td>
           <td class="px-6 py-4">
-            <Button />
+            <Button @click="toggleFavourite(university)" />
           </td>
         </tr>
       </tbody>

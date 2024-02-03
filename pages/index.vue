@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-const { searchName, searchCountry, clearFilters } = useForm();
+const {
+  searchName,
+  searchCountry,
+  clearFilters,
+  universities = [],
+} = useForm();
 </script>
 <template>
   <div class="max-w-screen-xl py-6 px-4 mx-auto">
@@ -18,6 +23,6 @@ const { searchName, searchCountry, clearFilters } = useForm();
         </span>
       </button>
     </form>
-    <Table />
+    <Table v-model:universities="universities" />
   </div>
 </template>
