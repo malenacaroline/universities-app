@@ -4,18 +4,18 @@ useInitFlowbite();
 
 <template>
   <nav
-    class="bg-cyan-700 text-white border-gray-200 dark:bg-gray-900 shadow mb-2"
+    class="bg-cyan-700 text-white border-gray-200 dark:bg-gray-900 mb-2 shadow-lg dark:shadow-teal-800/80"
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
-      <div class="flex items-center space-x-3 rtl:space-x-reverse">
+      <NuxtLink to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <IconsLogo />
         <span
           class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
           >GlobalUniSearch</span
         >
-      </div>
+      </NuxtLink>
       <button
         data-collapse-toggle="navbar-default"
         type="button"

@@ -1,7 +1,8 @@
 <script setup>
-const { universities } = defineProps({ universities: { required: true } });
+const { favUniversities = {}, universities = [] } = useUniversitiesData();
+
 const route = useRoute();
-const emit = defineEmits(["update"]);
+const isFavouriutesPage = route.name === "favourites";
 
 const toggleFavourite = (university) => {
   const lsUniversities = JSON.parse(
@@ -13,7 +14,7 @@ const toggleFavourite = (university) => {
   else lsUniversities[university.name] = university;
 
   localStorage.setItem("universities", JSON.stringify(lsUniversities));
-  if (route.name === "favourites") emit("update:universities", lsUniversities);
+  favUniversities.value = lsUniversities;
 };
 </script>
 
@@ -33,7 +34,9 @@ const toggleFavourite = (university) => {
       <tbody>
         <tr
           class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 w-3"
-          v-for="university in universities"
+          v-for="university in isFavouriutesPage
+            ? Object.values(favUniversities)
+            : universities"
           :key="university.name"
         >
           <th
@@ -47,12 +50,17 @@ const toggleFavourite = (university) => {
             <a
               class="font-medium text-cyan-600 hover:underline block mx-2"
               v-for="website in university.web_pages"
-              href="{{website}}"
+              :href="website"
+              target="_blank"
               >{{ website }}</a
             >
           </td>
           <td class="px-6 py-4">
-            <Button @click="toggleFavourite(university)" />
+            <ButtonFav
+            v-show="Boolean(favUniversities[university.name])"
+              @click="toggleFavourite(university)"
+            />
+            <Button v-show="!favUniversities[university.name]" @click="toggleFavourite(university)" />
           </td>
         </tr>
       </tbody>
