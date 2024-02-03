@@ -1,3 +1,6 @@
+<script setup>
+const searchName = defineModel();
+</script>
 <template>
   <div class="relative flex-1">
     <div
@@ -20,8 +23,9 @@
     <input
       type="text"
       id="table-search"
-      class="block px-4 py-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-cyan-700 focus:border-cyan-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-700 dark:focus:border-cyan-700 w-full"
+      class="block px-5 py-2.5 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-cyan-700 focus:border-cyan-700 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-700 dark:focus:border-cyan-700 w-full"
       placeholder="Name"
+      v-model="searchName"
     />
   </div>
 </template>

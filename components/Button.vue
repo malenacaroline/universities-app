@@ -6,7 +6,7 @@
       <span
         class="relative px-2 py-1.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 text-cyan-800 flex justify-items-center hover:text-white"
       >
-        <IconsHeart class="me-2 my-auto" /> Favourite
+        <IconsHeart class="my-auto" />
       </span>
     </button>
   </div>
