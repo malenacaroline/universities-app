@@ -1,75 +1,42 @@
-# Nuxt 3 Minimal Starter
+# GlobalUniSearch - Search Universites Nuxt App
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A Nuxt.js project showcasing the power of Nuxt 3 and its features.
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- Server-side rendering (SSR)
+- Modular components and reusable patterns
+- NuxtLink for efficient routing
 
+## Installation
 ```bash
-# npm
-npm install
+# Unzipe the project
 
-# pnpm
-pnpm install
+# Go into the repository
+cd universities-app
 
-# yarn
-yarn install
+# Install dependencies
+docker-compose up
 
-# bun
-bun install
+# Run app on browser
+localhost:3000
 ```
+## Usage
+#### Search Page (/):
+- When you open this page, it shows you info about universities in Canada by default.
+- You can change what you see by typing in the search box or picking a different country.
+- Click on "Clear Filters" to go back to seeing universities from Canada.
+- The table lists universities with their names, websites, and a button to save them.
+- Check the console for details about the API, like response code and time taken.
 
-## Development Server
+#### Favourites Page (/favourites):
 
-Start the development server on `http://localhost:3000`:
+- Here, you find universities you marked as favorites from Search Page.
+- If you change your mind, you can also remove universities from your favorites list on the table here.
 
-```bash
-# npm
-npm run dev
+## Build With
+- Nuxt 3
+- Tailwind CSS
+- Flowbite
+- Docker
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
