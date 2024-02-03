@@ -15,7 +15,7 @@ useInitFlowbite();
   <button
     id="dropdownDefaultButton"
     data-dropdown-toggle="dropdown"
-    class="text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-cyan-600 dark:hover:bg-cyan-700"
+    class="text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-cyan-600 dark:hover:bg-cyan-700 w-full md:w-auto"
     type="button"
   >
     {{ searchCountry }}

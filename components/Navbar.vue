@@ -48,7 +48,7 @@ useInitFlowbite();
             <NuxtLink
               to="/"
               class="block py-2 px-3 md:p-0 text-white hover:underline"
-              aria-current="page"
+              :class="{ 'underline': $route.path === '/' }"
               >Home</NuxtLink
             >
           </li>
@@ -56,6 +56,7 @@ useInitFlowbite();
             <NuxtLink
               to="/favourites"
               class="block py-2 px-3 md:p-0 text-white hover:underline"
+              :class="{ 'underline': $route.path === '/favourites' }"
               >Favourites</NuxtLink
             >
           </li>

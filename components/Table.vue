@@ -41,12 +41,12 @@ const toggleFavourite = (university) => {
         >
           <th
             scope="row"
-            class="px-6 py-4 font-medium text-gray-900 dark:text-white"
+            class="px-6 py-3 font-medium text-gray-900 dark:text-white"
           >
             {{ university.name || "N/A" }}
           </th>
-          <td class="px-6 py-4">{{ university["state-province"] || "N/A" }}</td>
-          <td class="px-6 py-4">
+          <td class="px-6 py-3">{{ university["state-province"] || "N/A" }}</td>
+          <td class="px-6 py-3">
             <a
               class="font-medium text-cyan-600 hover:underline block mx-2"
               v-for="website in university.web_pages"
@@ -55,7 +55,7 @@ const toggleFavourite = (university) => {
               >{{ website }}</a
             >
           </td>
-          <td class="px-6 py-4">
+          <td class="px-6 py-3 flex justify-center align-items-center">
             <ButtonFav
             v-show="Boolean(favUniversities[university.name])"
               @click="toggleFavourite(university)"

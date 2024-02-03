@@ -2,7 +2,7 @@
 const searchName = defineModel();
 </script>
 <template>
-  <div class="relative flex-1">
+  <div class="relative flex-1 w-full">
     <div
       class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none"
     >
